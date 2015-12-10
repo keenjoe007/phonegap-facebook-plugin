@@ -15,7 +15,6 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
 #import "FBAccessTokenData.h"
 #import "FBAppLinkData.h"
@@ -226,6 +225,7 @@ typedef void (^FBAppLinkFallbackHandler)(NSError *error);
  }
  */
 + (void)openDeferredAppLink:(FBAppLinkFallbackHandler)fallbackHandler;
+
 @end
 
 

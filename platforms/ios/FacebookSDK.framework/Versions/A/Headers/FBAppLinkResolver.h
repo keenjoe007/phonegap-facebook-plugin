@@ -27,8 +27,7 @@
  multiple App Links in a single call.
 
  @discussion
- Usage of this type requires a client token and linking
- Bolts.framework. See `[FBSettings setClientToken:]`.
+ Usage of this type requires a client token. See `[FBSettings setClientToken:]`.
  */
 @interface FBAppLinkResolver : NSObject<BFAppLinkResolving>
 

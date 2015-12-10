@@ -123,11 +123,6 @@ typedef NS_ENUM(NSInteger, FBErrorCode) {
      Reserved for future use.
     */
     FBErrorOperationDisallowedForRestrictedTreatment,
-
-    /*!
-     The server returned a response that the SDK could not decode.
-    */
-    FBErrorUnexpectedResponse,
 };
 
 /*!

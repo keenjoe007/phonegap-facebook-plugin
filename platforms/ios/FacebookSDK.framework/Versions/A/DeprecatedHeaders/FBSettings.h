@@ -296,13 +296,25 @@ typedef NS_ENUM(NSUInteger, FBRestrictedTreatment) {
 + (void)setLimitEventAndDataUsage:(BOOL)limitEventAndDataUsage;
 
 /*!
- @deprecated legacy Graph API 1.0 has been deprecated. This will always return NO.
+ @method
+
+ @abstract Returns YES if the legacy Graph API mode is enabled
 */
-+ (BOOL)isPlatformCompatibilityEnabled __attribute__ ((deprecated("legacy Graph API 1.0 has been deprecated. This will always return NO.")));
++ (BOOL)isPlatformCompatibilityEnabled;
 
 /*!
- @deprecated legacy Graph API 1.0 has been deprecated. This will be a no-op.
+ @method
+
+ @abstract Configures the SDK to use the legacy platform.
+
+ @param enable indicates whether to use the legacy mode
+
+ @discussion Setting this flag has several effects:
+   - FBRequests will target v1.0 of the Graph API.
+   - Login will use the prior behavior without abilities to decline permission.
+   - Specific new features such as `FBLikeButton` that require the current platform
+     will not work.
 */
-+ (void)enablePlatformCompatibility:(BOOL)enable __attribute__ ((deprecated("legacy Graph API 1.0 has been deprecated. This will be a no-op.")));
++ (void)enablePlatformCompatibility:(BOOL)enable;
 
 @end
